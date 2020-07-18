@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <title> LaboIII Parcial 2 Gravante Matias</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+    <script src="Vehiculo.js"></script>
+    <script src="Auto.js"></script>
+    <script src="Camioneta.js"></script>
+    <script src="funcionesHtml.js"></script>
+</head>
+
+<body>
+    <div class="container" id="contenedorAlta" hidden="true">
+        <label>id: </label>
+        <input type="text" id="id" name="id" readonly="readonly" disabled=true>
+        <label>Marca: </label>
+        <input type="Text" id="txtMarca" /><br>
+        <label>Modelo: </label>
+        <input type="Text" id="txtModelo" /><br>
+        <label>Precio</label>
+        <input type="number" id="txtPrecio" /><br>
+        <div id="divCamioneta" hidden=true>
+            <label>4X4</label>
+            <input type="checkbox" id="4x4ChkBox" name="4x4ChkBox">
+        </div>
+        <div id="divAuto">
+            <label>Cantidad de Puertas </label>
+            <input type="number" id="txtCantPuertas"  /><br>
+        </div>
+        <label>Tipo</label>
+        <select name="select" id="tipo" enable>
+            <option value="Auto" selected>Auto</option>
+            <option value="Camioneta">Camioneta</option>
+        </select>
+        <br>
+        <input type="button" id="btnAgregar" value="Agregar" />
+        <input type="button" id="btnCerrar" value="Cerrar" />
+    </div>
+    <div class="container-fluid" id="contenedor">
+        <div id="divAlta">
+            <input type="button" value="Alta" id="btnAlta" name="btnAlta">
+            <br>
+        </div>
+        <label>Filtrar por:</label>
+        <select name="selectFilter" id="filtro" enable>
+            <option value="" selected>""</option>
+            <option value="Auto">Auto</option>
+            <option value="Camioneta">Camioneta</option>
+        </select>
+        <br>
+        <div id="divPromedio">
+            Promedio:
+            <input type="text" id="promedio" name="promedio">
+            <br>
+        </div>
+        <div id="divCalcProm">
+            <input type="button" value="Calcular Promedio" id="btnProm" name="btnProm">
+            <br>
+        </div>
+        <div id="columnas">
+            <input type="checkbox" id="idChkBox" name="idChkBox">
+            Id
+            <input type="checkbox" id="marcaChkBox" name="marcaChkBox">
+            Marca
+            <input type="checkbox" id="modeloChkBox" name="modeloChkBox">
+            Modelo
+            <input type="checkbox" id="precioChkBox" name="precioChkBox">
+            Precio
+            <br>
+        </div>
+        <div class="container-fluid" id="contTable">
+            <h1 id="h1">Lista de Vehiculos</h1>
+        </div>
+        <table id="tablaVehiculos">
+            <tr>
+                <th>Id</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Precio</th>
+                <th>Cantidad de Puertas</th>
+                <th>Es 4x4</th>
+                <th>Accion</th>
+            </tr>
+        </table>
+        <table id="tablaFiltrados" hidden=true>
+            <tr>
+                <th>Id</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Precio</th>
+                <th>Cantidad de Puertas</th>
+                <th>Es 4x4</th>
+                <th>Accion</th>
+            </tr>
+        </table>
+</body>
+
+</html>
